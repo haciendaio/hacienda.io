@@ -1,0 +1,8 @@
+production:
+  base_url: http://hacienda.io
+
+development:
+  base_url: http://localhost:9292
+
+test:
+  base_url: http://localhost:9292

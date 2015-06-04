@@ -1,0 +1,12 @@
+*.gem
+.DS_Store
+.gems
+.bundle
+.bundle/
+.config
+InstalledFiles
+tmp
+vendor
+.idea/
+*.iml
+Gemfile.lock
