@@ -9,4 +9,3 @@ tmp
 vendor
 .idea/
 *.iml
-Gemfile.lock
