@@ -14,11 +14,9 @@ module Hacienda
 
       css :screen, '/css/screen.css', %w(/css/animate.min.css /css/gridism.css /css/gridism-tweaks.css /css/hacienda.css)
 
-      js :application, '/js/application.js', [
-                         '/js/wow.min.js'
-                     ]
+      js :application, '/js/application.js', ['/js/wow.min.js']
 
-      asset_hosts [ base_url ]
+      asset_hosts [base_url]
 
       js_compression :jsmin
 

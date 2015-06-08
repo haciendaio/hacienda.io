@@ -1,3 +1,5 @@
+require 'slim'
+
 module Hacienda
   class Homepage
 

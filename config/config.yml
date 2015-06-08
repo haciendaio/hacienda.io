@@ -1,5 +1,5 @@
 production:
-  base_url: http://hacienda.io
+  base_url: http://hacienda-io.herokuapp.com
 
 development:
   base_url: http://localhost:9292
