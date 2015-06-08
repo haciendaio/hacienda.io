@@ -10,9 +10,9 @@ namespace :run do
     sh 'rackup config.ru'
   end
 
-  desc 'Run rerun'
-  task :rerun do
-    sh 'rackup --port 8282 config.ru'
+  desc 'Run puma'
+  task :puma do
+    sh 'puma -C config/puma.rb'
   end
 
 end

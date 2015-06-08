@@ -1,5 +1,3 @@
-require 'slim'
-
 module Hacienda
   class Homepage
 
@@ -8,7 +6,7 @@ module Hacienda
     end
 
     def render_page
-      @app.slim(:'homepage')
+      @app.slim :homepage
     end
 
   end

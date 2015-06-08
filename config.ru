@@ -4,6 +4,8 @@ require 'bundler/setup'
 Bundler.require :website
 
 require 'sinatra/base'
-require File.join(File.dirname(__FILE__), 'app', 'init')
+require 'slim'
 
-run Hacienda::Website
+require_relative 'app/init'
+
+Hacienda::Website.run!
