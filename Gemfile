@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 group :website do
   gem 'rake'
+  gem 'puma'
   gem 'sinatra'
   gem 'json'
   gem 'compass'
