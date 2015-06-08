@@ -1,7 +1,7 @@
 require 'bundler/setup'
 
 desc 'Run using default runner'
-task run: ['run:rerun']
+task run: ['run:rackup']
 
 namespace :run do
 
