@@ -1,0 +1,16 @@
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    meta content="width=device-width,initial-scale=1" name="viewport"
+    meta content="Hacienda.io" name="application-name"
+    meta content="#ffffff" name="msapplication-TileColor"
+
+    == render :slim, :'partials/favicons-metatags'
+    == render :slim, :'partials/social-sharing-metatags'
+
+    title Hacienda, your simple, lightweight and pluggable service built to store your content
+
+  body
+    h1 This is a wiki page
+    h2 #{title}
+    p #{{description}}
