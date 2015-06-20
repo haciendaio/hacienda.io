@@ -1,0 +1,36 @@
+---
+- name: Install basic infrastructure for all the projects
+  hosts: digital-ocean
+  user: root
+  tasks:
+    - name: setting up the folder
+      command: mkdir -p /root/deployments/hacienda.io
+
+    - name: setting up the folder
+      command: mkdir -p /root/archives  
+
+    - name: uploading tarball with the project
+      copy: src=../build/hacienda.io.tar.gz dest=/root/archives/hacienda.io.tar.gz
+
+    - name: untaring the project
+      command: tar -xvf /root/archives/hacienda.io.tar.gz -C /root/deployments/hacienda.io
+
+    - name: getting the gems (maybe i should not be doing this in prod)
+      command: bundle install
+      args:
+        chdir: /root/deployments/hacienda.io
+
+    - name: uploading service conf
+      copy: src=files/hacienda.io.conf dest=/etc/init/hacienda.io.conf
+
+    - name: restarting the unicorn service
+      service: name=hacienda.io state=restarted
+
+    - name: uploading nginx conf
+      copy: src=files/app_nginx.conf dest=/etc/nginx/sites-available/hacienda.io.conf
+
+    - name: uploading nginx conf
+      copy: src=files/app_nginx.conf dest=/etc/nginx/sites-enabled/hacienda.io.conf
+
+    - name: restarting the nginx service
+      service: name=nginx state=restarted

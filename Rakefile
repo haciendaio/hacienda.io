@@ -1,5 +1,6 @@
 require 'bundler/setup'
-
+require_relative 'tasks/deploy'
+require_relative 'tasks/packaging'
 desc 'Run using default runner'
 task run: ['run:rackup']
 
