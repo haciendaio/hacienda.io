@@ -10,3 +10,4 @@ vendor
 .idea/
 *.iml
 build/
+ansible-output
