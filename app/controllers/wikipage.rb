@@ -9,7 +9,6 @@ module Hacienda
 
     def render_page
       wikipage = HaciendaStore.new("http://46.101.129.98:81").get_public_item("wiki", @id)
-      puts wikipage
       @app.slim :wikipage, locals: wikipage
     end
 
